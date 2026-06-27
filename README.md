@@ -5,4 +5,12 @@
 ```bash
 npm i nodemailer
 ```
+### install for typescript
+```bash
+npm install --save-dev @types/nodemailer
+```
+### short version
+```bash
+npm i -D @types/nodemailer
+```
 ---
