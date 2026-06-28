@@ -74,7 +74,9 @@ export async function GET(request: NextRequest) {
 ```
 ---
 
-###
+
+---
+### Testing from app password
 ![](https://imgur.com/JXS09g7.png)
 
 ```bash
