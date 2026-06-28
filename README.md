@@ -17,7 +17,8 @@ npm i -D @types/nodemailer
 ---
 
 ### api/email/route.js
-![](
+![](https://imgur.com/JXS09g7.png)
+
 
 ```bash
 import { NextRequest, NextResponse } from "next/server";
