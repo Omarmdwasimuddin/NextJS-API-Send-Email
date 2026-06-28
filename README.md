@@ -75,7 +75,7 @@ export async function GET(request: NextRequest) {
 ---
 
 ### Testing from app password
-![]()
+![](https://imgur.com/RN4fnDy.png)
 
 ```bash
 import { NextRequest, NextResponse } from "next/server";
