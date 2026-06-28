@@ -125,7 +125,7 @@ export async function GET(request:NextRequest) {
 
 }
 ```
-
+### .env
 ```bash
 GMAIL_USER=yourgmailid@gmail.com
 GMAIL_APP_PASSWORD=your app password collect from google account
