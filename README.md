@@ -74,9 +74,61 @@ export async function GET(request: NextRequest) {
 ```
 ---
 
+### Testing from app password
+![]()
+
+```bash
+import { NextRequest, NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+
+
+export async function GET(request: NextRequest) {
+
+    const {searchParams} = new URL(request.url);
+    const ToEmail = searchParams.get("email");
+
+    if (!ToEmail) {
+        return NextResponse.json(
+            { message: "Email query parameter is required" },
+            { status: 400 }
+        );
+    }
+
+
+    // Transporter
+    let Transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user:"mdwasimu015@gmail.com",
+            pass:"oicgsqmgzvouucdp",
+        },
+    })
+
+    // Prepar Email
+    let myEmail = {
+        from:"Test email from next.js application<mdwasimu015@gmail.com>",
+        to:ToEmail,
+        subject:"Test email from next.js application",
+        text:"Test email from next.js application..."
+    }
+
+
+    try {
+        await Transporter.sendMail(myEmail);
+        return NextResponse.json(
+            {message: "success"}
+        )
+    } catch (error) {
+        console.log("Failed messaging", error)
+        return NextResponse.json(
+            {message: "Fail!"}
+        )
+    }
+}
+```
 
 ---
-### Testing from app password
+### Testing from app password with .env file
 ![](https://imgur.com/JXS09g7.png)
 
 ```bash
