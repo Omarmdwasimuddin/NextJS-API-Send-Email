@@ -17,7 +17,7 @@ npm i -D @types/nodemailer
 ---
 
 ### api/email/route.js
-![](https://imgur.com/JXS09g7.png)
+![](https://imgur.com/sHKAN3c.png)
 
 
 ```bash
